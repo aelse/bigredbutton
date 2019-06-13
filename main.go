@@ -48,7 +48,7 @@ func main() {
 	for {
 		msg := <-ch
 		log.Printf("%q", strings.Trim(msg, "\r\n"))
-		if *once && strings.HasPrefix(msg, "PRESSED") {
+		if *once && strings.HasPrefix(msg, "pressed") {
 			log.Println("Terminating")
 			break
 		}
